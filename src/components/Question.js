@@ -10,6 +10,13 @@ function Question({ question, onAnswered }) {
     onAnswered(false);
 
     }
+    //setTimeOut to run after 1 sec
+    const timerId = setTimeout(()=>{
+      setTimeRemaining((timeRemaining) => timeRemaining - 1);
+      // setTimeRemaining(timeRemaining - 1);
+      
+    }, 1000);
+
   })
 
   function handleAnswer(isCorrect) {
